@@ -1,0 +1,7 @@
+git adımları
+1- gitupda yeni bir repostory aç
+2-intelijide teminale gel repostorydeki adınları tek tek yaz
+3-projede yeni bir çalışmadan sonra terminalde sırası ile
+    1- git add .
+    2-git commit -m"commit ismi"
+    3-git push

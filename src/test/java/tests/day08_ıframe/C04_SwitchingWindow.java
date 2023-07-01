@@ -73,7 +73,7 @@ bekle(2);
         //● Sayfadaki textin “New Window” olduğunu doğrulayın.
 
         //● Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu doğrulayın.
-        bekle(5);
+        bekle(4);
     }
 
 
