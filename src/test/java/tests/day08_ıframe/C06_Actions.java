@@ -16,10 +16,10 @@ public class C06_Actions extends Testbase {
         //1- https://demoqa.com/droppable adresine gidelim
         driver.get("https://demoqa.com/droppable");
         //2- “Drag me” butonunu tutup “Drop here” kutusunun ustune birakalim
-        WebElement tasinacakElement = driver.findElement(By.xpath("//div[@id='draggable']"));
-        WebElement hedefAlan = driver.findElement(By.xpath("(//div[@id='droppable'])[1]"));
-        Actions actions = new Actions(driver);
-        actions.dragAndDrop(tasinacakElement,hedefAlan).perform();
+       Actions actions=new Actions(driver);
+       bekle(2);
+       actions.dragAndDrop(driver.findElement(By.xpath("//div[@id='draggable']")),driver.findElement(By.xpath("//div[@id='droppable'][1]"))).perform();
+       bekle(2);
         //3- “Drop here” yazisi yerine “Dropped!” oldugunu test edin
 
         WebElement dropedYazıElementi=driver.findElement(By.xpath("//p[text()='Dropped!']"));
