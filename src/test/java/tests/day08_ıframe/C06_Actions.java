@@ -1,5 +1,6 @@
 package tests.day08_ıframe;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -15,12 +16,18 @@ public class C06_Actions extends Testbase {
         //1- https://demoqa.com/droppable adresine gidelim
         driver.get("https://demoqa.com/droppable");
         //2- “Drag me” butonunu tutup “Drop here” kutusunun ustune birakalim
-        WebElement taşınacakElement= driver.findElement(By.xpath("//div[@id='draggable']"));
-        WebElement hedefgidecekElement = driver.findElement(By.xpath("(//div[@id=‘droppable’])[1]"));
-        Actions actions=new Actions(driver);
-
-        actions.dragAndDrop(taşınacakElement,hedefgidecekElement).perform();
+        WebElement tasinacakElement = driver.findElement(By.xpath("//div[@id='draggable']"));
+        WebElement hedefAlan = driver.findElement(By.xpath("(//div[@id='droppable'])[1]"));
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(tasinacakElement,hedefAlan).perform();
         //3- “Drop here” yazisi yerine “Dropped!” oldugunu test edin
+
+        WebElement dropedYazıElementi=driver.findElement(By.xpath("//p[text()='Dropped!']"));
+        String expectedyazı = "Dropped!";
+        String actualYazı=dropedYazıElementi.getText();
+
+        Assert.assertEquals(expectedyazı,actualYazı);
+
 
 
 
