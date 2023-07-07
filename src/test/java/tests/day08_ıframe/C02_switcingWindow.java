@@ -20,6 +20,7 @@ public class C02_switcingWindow extends TestBaseQuit {
 bekle(2);
 // Yeni bir tab olarak wise quarter anasayfaya gidin
         driver.switchTo().newWindow(WindowType.TAB).get("https://www.wisequarter.com");
+        bekle(2);
 // title'in Wise icerdigini test edin
         String expectedTitle ="Wise";
         String actualTitle =driver.getTitle();
@@ -28,6 +29,7 @@ bekle(2);
 
 // yeni bir window acarak youtube sayfasina gidin
         driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.youtube.com");
+        bekle(2);
 // url'in youtube icerdigini test edin.
         expectedUrl ="youtube";
         actualUrl =driver.getCurrentUrl();
