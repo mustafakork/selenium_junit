@@ -5,7 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import tests.utilities.TestBaseQuit;
 
-public class C03_switching extends TestBaseQuit {
+public class
+C03_switching extends TestBaseQuit {
 
         @Test
         public void test01(){
